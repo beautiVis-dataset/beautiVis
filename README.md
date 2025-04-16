@@ -64,27 +64,3 @@ The `nonvis_csv` folder contains monthly files (e.g., `2012-02-nonvisualizations
 - `high_level_categories`: Detected non-visual topics  
 
 The complete nonvis collection is available as `nonvis_images.zip` in our [Hugging Face repository](https://huggingface.co/datasets/beautiVis/beautiVis).
-
-## Additional Files and Tools
-
-For users who are unable to download the images from the Hugging Face repository, there are extract scripts available:
-
-- **extract_vis.py**: Run this script to extract all images listed in the `vis_csv` folder.  
-- **extract_nonvis.py**: Run this script to extract all images listed in the `nonvis_csv` folder.  
-- **extract_combined.py**: Run this script to extract all images listed in the `combined_csv` folder.
-
-If you wish to perform your own processing for Phase 3, we provide the necessary files:
-
-- **visornot_gpt.py**
-- **prompt.txt**
-- **key1.txt, key2.txt, and key3.txt**  
-- **organize_visornot_images.py**  
-- **unique_chart_types.py**  
-- **clean_chart_types.py**
-
-Start by running **visornot_gpt.py** with the appropriate parameters (for example: `python visornot_gpt.py --start 2012-02 --end 2012-03 --key 1`) along with the prompt specified in **prompt.txt**; feel free to adjust the prompt and the script to fit your requirements. The key files (key1.txt, key2.txt, and key3.txt) are empty but provided for to support up to three keys, which can help distribute the load and accelerate processing by running different batches of months in parallel using separate terminals. It is recommended to monitor the progress on the OpenAI platform as some batches may take longer than others; the script is designed to restart any batch that fails or takes longer than expected (typically within an hour). Once finished, **organize_visornot_images.py** to move the images into their proper folder in visornot based on the output by **visornot_gpt.py**.
-
-After processing, run **unique_chart_types.py** to compile the list of all unique chart types generated. You can then update the corrections dictionary to address any typos or inconsistencies produced by GPT. Once you're satisfied with the list, update the corrections dictionary in **clean_chart_types.py** and run it to clean and standardize the chart types.
-
-This comprehensive set of tools and files enables you to customize and extend the Phase 3 process for your own research.
-
