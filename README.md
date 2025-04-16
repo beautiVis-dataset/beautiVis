@@ -35,7 +35,7 @@ The `combined_csv` folder contains raw monthly CSV files (e.g., `2012-02-combine
 - `sanitized_title`: Cleaned version of title  
 - `image_file`: Corresponding image filename in `yyyy-mm-nnnn` format  
 
-The complete image collection is available as `combined_images.zip` in our [Hugging Face repository](https://huggingface.co/datasets/sru3/beautiVis).
+The complete image collection is available as `combined_images.zip` in our [Hugging Face repository](https://huggingface.co/datasets/beautiVis/beautiVis).
 
 ### vis_csv and vis_images  
 The `vis_csv` folder contains GPT-annotated monthly files (e.g., `2012-02-visualizations.csv`) for verified visualizations, with these additional columns:  
@@ -55,7 +55,7 @@ The `vis_csv` folder contains GPT-annotated monthly files (e.g., `2012-02-visual
 - `gpt_cleaned_chart_type`: Cleaned and standardized list of chart types 
 - `gpt_overarching_chart_type`: MASSVIS category (e.g. "Bar")
 
-The complete vis collection is available as `vis_images.zip` in our [Hugging Face repository](https://huggingface.co/datasets/sru3/beautiVis).
+The complete vis collection is available as `vis_images.zip` in our [Hugging Face repository](https://huggingface.co/datasets/beautiVis/beautiVis).
 
 ### nonvis_csv and nonvis_images  
 The `nonvis_csv` folder contains monthly files (e.g., `2012-02-nonvisualizations.csv`) for excluded content, featuring:  
@@ -63,7 +63,7 @@ The `nonvis_csv` folder contains monthly files (e.g., `2012-02-nonvisualizations
 - `chart_type`: GPT-4o's classification rationale (all of which are 'none')  
 - `high_level_categories`: Detected non-visual topics  
 
-The complete nonvis collection is available as `nonvis_images.zip` in our [Hugging Face repository](https://huggingface.co/datasets/sru3/beautiVis).
+The complete nonvis collection is available as `nonvis_images.zip` in our [Hugging Face repository](https://huggingface.co/datasets/beautiVis/beautiVis).
 
 ## Additional Files and Tools
 
